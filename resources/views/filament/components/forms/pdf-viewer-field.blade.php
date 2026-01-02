@@ -30,8 +30,7 @@
                 <embed
                     type="application/pdf"
                     class="fi-growable"
-                    src="{{ $getRoute(current($getState())) }}" style="min-height: {{ $getMinHeight() }};">
-                </iframe>
+                    src="{{ $getRoute($getState()) }}" style="min-height: {{ $getMinHeight() }};">
             @elseif(!empty($getFileUrl()))
                 <embed
                     type="application/pdf"
