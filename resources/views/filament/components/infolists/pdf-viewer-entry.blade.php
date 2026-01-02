@@ -1,15 +1,15 @@
 <x-dynamic-component :component="$getEntryWrapperView()" :entry="$entry">
     <div class="fi-sc-flex">
         @if(!empty($getState()))
-            <iframe
+            <embed
+                type="application/pdf"
                 class="fi-growable"
                 src="{{ $getRoute($getState()) }}" style="min-height: {{ $getMinHeight() }};">
-            </iframe>
         @elseif(!empty($getFileUrl()))
-            <iframe
+            <embed
+                type="application/pdf"
                 class="fi-growable"
                 src="{{ $getFileUrl() }}" style="min-height: {{ $getMinHeight() }};">
-            </iframe>
         @endif
     </div>
 </x-dynamic-component>

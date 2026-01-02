@@ -27,15 +27,16 @@
     >
         <div class="fi-sc-flex">
             @if(!empty($getState()))
-                <iframe
+                <embed
+                    type="application/pdf"
                     class="fi-growable"
                     src="{{ $getRoute(current($getState())) }}" style="min-height: {{ $getMinHeight() }};">
                 </iframe>
             @elseif(!empty($getFileUrl()))
-                <iframe
+                <embed
+                    type="application/pdf"
                     class="fi-growable"
                     src="{{ $getFileUrl() }}" style="min-height: {{ $getMinHeight() }};">
-                </iframe>
             @endif
         </div>
     </x-filament::input.wrapper>
